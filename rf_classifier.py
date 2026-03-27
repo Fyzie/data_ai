@@ -1,5 +1,3 @@
-# focusing in eliminating escapes
-
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -10,7 +8,7 @@ from sklearn.metrics import classification_report, confusion_matrix
 from imblearn.over_sampling import SMOTE # SMOTE creates synthetic examples to balanced the dataset classes
 
 # Load data
-database_file_path = "C:/Users/Hafizi/Documents/computer vision/03-lens/void_vector_db_v3.csv"
+database_file_path = "path/to/file.csv"
 df = pd.read_csv(database_file_path)
 
 # split features and target
@@ -52,7 +50,7 @@ print("\nClassification Report:")
 print(classification_report(y_test, y_pred_safe))
 
 # save model
-joblib.dump(clf, "void_filter_model.pkl")
+joblib.dump(clf, "trained_model.pkl")
 
 # visualize feature importance based all decison trees
 importances = clf.feature_importances_
